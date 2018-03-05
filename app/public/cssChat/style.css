@@ -1,0 +1,178 @@
+body {
+    background-color: #444;
+    background: url('../images/login-bg.jpg');  
+}
+
+.form-signin input[type="text"] {
+    margin-bottom: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-signin .form-control {
+    position: relative;
+    font-size: 16px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.vertical-offset-80 {
+    padding-top: 80px;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.linha_usuario{
+    display: block;
+    margin-top:10px;
+    padding:5px;
+}
+
+.linha_usuario img{
+    margin-right:5px;
+    margin-top:-7px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.conversa{
+	margin-top:70px;
+	margin-bottom: 70px;
+}
+
+.participantes{
+	margin-top:70px;
+	margin-bottom: 70px;
+}
+
+.participante{
+	display:block;
+	margin-bottom:15px;
+}
+
+.participante img{
+	margin-top:-10px;
+}
+
+.dialogo{
+    position: relative;
+    max-width:80%;
+    height:auto;
+    margin-bottom:15px;
+    padding:10px 25px 10px 10px;
+    background:#D8F0FE;
+    border-radius: 10px;
+    clear: both;
+}
+
+.msgCliente{
+    float: left;
+    margin-left: 75px;
+}
+
+.msgBot{
+    float: right;
+    background:#dfdfdf;
+    margin-right: 75px;
+}
+
+.imgCliente{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: -75px;
+    background-image: url(../Content/img/profile.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imgBot{
+    width: 60px;
+    height: 80px;
+    position: absolute;
+    right: -75px;
+    background-image: url(../Content/img/assistente.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.arrowCliente::before{
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #D8F0FE;
+}
+
+.arrowBot::before{
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #dfdfdf;
+}
+
+.dialogo h4{
+	font-size:16px;
+	font-weight: bold;
+    color:#333;
+    padding-left: 10px;
+}
+
+.dialogo p{
+	font-size:13px;
+	padding-left:25px;
+	color:#666;
+}
+
+#conversa{
+    margin-left: 0; 
+    margin-right: 0; 
+    padding-left: 15px; 
+    padding-right: 15px;
+}
+
+.msgBot img{
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: 0 !important;
+    float: initial !important;
+}

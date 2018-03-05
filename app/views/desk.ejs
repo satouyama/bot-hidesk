@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>A Simple Support Ticket Layout</title>
+  
+  
+  <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
+</head>
+
+<body>
+
+  <div class="container theme-showcase" role="main">
+  <div class="page-header">
+    <h1>Suporte </h1>
+  </div>
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+         <th>#</th>   
+        <th>e-mail</th>
+        <th>Solicitante</th>
+        <th>tipo</th>
+        <th>Descrição mensagem</th>
+        <th>Prioridade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%for(i=0; i < data.length; i++){%>
+        <tr>
+        <td><%=data[i].id%></td>
+        <td><%=data[i].email%></td>
+        <td><%=data[i].solicitante%><br><small class="text-muted"></small></td>
+        <td><span class="label label-danger"><%=data[i].tipo%></span></td>
+        
+        <td><%=data[i].descricaoMensagem%><td>
+            
+                        <div class="btn-group pull-right">
+                          <button class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i></button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="https://localhost:3000/posts"><i class="glyphicon glyphicon-remove-circle"></i> Close Ticket</a></li>
+                          </ul>
+                        </div>
+
+                        <h4><span class="label label-primary"><%=data[i].prioridade%></span></h4>
+                      
+    </tr>
+     <%}%>
+    </tbody>
+  </table>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
+
+  
+
+</body>
+
+</html>

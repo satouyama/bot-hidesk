@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+
+    <!-- bootstrap - link cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <!-- estilo -->
+    <link href="Content/css/form.css" rel="stylesheet">
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row vertical-offset-80" id="bloco">
+            <div class="col-md-12">
+                <div class="panel panel-default" id="formPanel">
+                    <div class="panel-heading">
+                        <div class="row-fluid user-row">
+                            <img src="Content/img/logo-allmatech.png" class="img-responsive" alt="Chat de ajuda" />
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form accept-charset="UTF-8" role="form" class="form-signin" action="/chat" method="post" id="form">
+                            <label class="panel-login" style="display: block">
+                                <div class="login_result"></div>
+                            </label>
+                            <input placeholder="Nome" id="apelido" name="apelido" type="text">
+                            <br/>
+                            <input placeholder="e-mail" id="email" name="email" type="text">
+                            <br/>
+                            <input placeholder="Número" id="numero" name="telefone" type="tel">
+                            <br/>
+                            <fieldset>
+                                <button type="submit" class="btn btn-lg btn-success btn-block" id="entrar">Entrar »</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="row">
+                        <div class="col-md-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>     
+        $("select").change(function () {
+            var select = $("select option:selected");
+
+            if (select.val() == "outra") {
+                $('#OutraCidade').show("slow");
+            }
+            else {
+                $('#OutraCidade').hide("slow");
+            }
+        })
+    </script>
+</body>
+
+</html>

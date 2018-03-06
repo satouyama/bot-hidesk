@@ -1,6 +1,6 @@
 module.exports = function(app){
 
-	app.get('/chatForm', function(req,res){
+	app.get('/', function(req,res){
 	  res.render('formChat');
 	});
 

@@ -2,7 +2,7 @@
 var app = require('./config/server');
 
 // Listen PORT
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 8080;
 // importar o package request
 const request = require('request');
 const axios = require('axios');

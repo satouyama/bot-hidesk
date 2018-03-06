@@ -2,9 +2,9 @@
 var app = require('./config/server');
 // Listen PORT
 var port = process.env.PORT || 3000;
-
+var eterium = 0;
 //dotenv
-equire('dotenv').config({silent: true});
+require('dotenv').config({silent: true});
 // importar o package request
 const request = require('request');
 const axios = require('axios');

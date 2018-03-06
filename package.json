@@ -7,6 +7,7 @@
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
     "consign": "^0.1.6",
+    "dotenv": "^5.0.1",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "json-query": "^2.2.2",
@@ -18,8 +19,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",

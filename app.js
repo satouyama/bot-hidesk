@@ -1,8 +1,10 @@
 /* importar as configurações do servidor */
 var app = require('./config/server');
-
 // Listen PORT
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 3000;
+
+//dotenv
+equire('dotenv').config({silent: true});
 // importar o package request
 const request = require('request');
 const axios = require('axios');

@@ -1,5 +1,5 @@
 # Chatbot para atendimento ao usuario
-capaceidades :<br/>
+capacidades :<br/>
 <b>-Gerar tickets para o suporte <br/>
 <b>-Realizar pre-atendimento <br/>
 <b>-Ajuda a solucionar problemas que estejam cadastrados na base <br/>

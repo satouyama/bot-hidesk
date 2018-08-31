@@ -64,7 +64,7 @@ io.on('connection', function (socket) {
 
 	//payload config watson conversation
 	let payload = {
-		workspace_id: '5d33662c-610a-4c1c-90c2-5edaf1275601',
+		workspace_id: '1c2345d7-6ff1-4f62-9446-7b68508ca955',
 		input: {
 			text: 'Oi'
 		}

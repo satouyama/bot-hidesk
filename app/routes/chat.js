@@ -1,4 +1,16 @@
 module.exports= function(app){
+
+	const VoiceResponse = require('twilio').twiml.VoiceResponse;
+
+const response = new VoiceResponse();
+response.say(
+  {
+    voice: 'woman',
+    language: 'br',
+  },
+  'Bem vindo a allmatech'
+);
+
 app.get('/chat', function(req ,res){
 	var dadosForm = req.body;
 
@@ -25,4 +37,9 @@ app.post('/chat', function(req ,res){
 	res.render("chat", {dadosForm : dadosForm});
 
 });
+
+app.get('/xml',(req, res) =>{ 
+	res.set('Content-Type', 'text/xml');
+    res.send(response.toString());
+})
 }

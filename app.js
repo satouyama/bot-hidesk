@@ -48,10 +48,28 @@ app.set('io', io);
 		console.log(error);
 	  });       
  }
+
+
+ fazerChamada =  function(){
+	const accountSid = 'AC4697f6d5b46c2f79112915fe8606a7ca';
+	const authToken = '2fc016709c22a64092645d519453d2fb';
+	const client = require('twilio')(accountSid, authToken);
+	
+	client.calls
+	.create({
+		url: 'https://bot-hidesk.herokuapp.com/xml',
+		to: '+5561993660169',
+		from: '+551131819344'
+	  })
+		  .then(call => console.log(call.sid))
+		  .done();
+ }
  
 
 /* criar a conexão por websocket */
 io.on('connection', function (socket) {
+
+	
 
 	// variavel que recebe as informações do ticket do usuario
   	let ticketUser = [{
@@ -76,6 +94,8 @@ io.on('connection', function (socket) {
 	});
 
 	socket.on('msgParaServidor', function (data) {
+
+		console.log(data);
 		var msgCliente = data.mensagem;
 		var apelido = data.apelido;
 		/* dialogo */
@@ -92,26 +112,33 @@ io.on('connection', function (socket) {
 		conversation.message(payload, (error, response) => {
 			let entity = response.intents[0];
 			let entidade = response.entities[0];
+			let entents = response.intents[0].intent;
 			 ticketUser.nome = data.apelido;
-			console.log(response);
-
-
+			
+           
+		
+ 
 			// se o problema for de desenvolviment guarda na variavel o input do usuario
 			if (entity != null) {
-				if (entity.intent == "ProblemaDev") {
-					ticketUser.problema = response.input.text;
-					ticketUser.tipo = "Dev";	
-					ticketUser.prioridade = 'High';
-					ticketUser.email = "douglas@gmail.com"		
+			
 
-					enviaTicket(ticketUser);
-				}
+
 
 			}
+			 
+			if(entents != null){
+				if(entents == 'gostarImovel'){
+					fazerChamada();
+				}
+			}
+			
 			// se o valor da entidade for Aguas Claras
 			if (entidade != null) {
 				
 			}
+
+
+		
 
 
 			//E atualizar o contexto do payload
@@ -120,7 +147,7 @@ io.on('connection', function (socket) {
 			// emite a mensagem para o usuario 
 			socket.emit(
 				'msgDoBot',
-				{ apelido: "Assistente Virtual", mensagem: response.output.text[0] }
+				{ apelido: "Assistente Virtual", mensagem: response.output.text[0]}
 			);
 
 		})

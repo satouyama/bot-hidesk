@@ -36,9 +36,9 @@ module.exports= function(app){
 	response.say(
 		{
 			voice: 'woman',
-			language: 'br',
+			language: 'pt-BR',
 		},
-		'Bem vindo a allmatech'
+		'Olá eu sou a Allma, Bem vindo a allmatech!'
 	);
 
 	res.writeHead(200, {'Content-Type' : 'text/xml'})

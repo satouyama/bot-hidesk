@@ -38,7 +38,7 @@ module.exports= function(app){
 			voice: 'woman',
 			language: 'pt-BR',
 		},
-		'Vai tomar no cu , seu filho da puta ,Claiton'
+		'..Vai tomar no cu , seu filho da puta ,Claiton'
 	);
 
 	res.writeHead(200, {'Content-Type' : 'text/xml'})

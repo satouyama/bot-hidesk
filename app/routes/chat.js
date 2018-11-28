@@ -38,7 +38,7 @@ module.exports= function(app){
 			voice: 'woman',
 			language: 'pt-BR',
 		},
-		'Olá, Claiton, você é um viado'
+		'Olá, Douglas, um cliente acaba de entrar em contato, e está interessado no imóvel 001'
 	);
 
 	res.writeHead(200, {'Content-Type' : 'text/xml'})

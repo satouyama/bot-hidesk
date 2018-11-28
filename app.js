@@ -58,7 +58,7 @@ app.set('io', io);
 	client.calls
 	.create({
 		url: 'https://bot-hidesk.herokuapp.com/xml',
-		to: '+5561991618577',
+		to: '',
 		from: '+551131819344'
 	  })
 		  .then(call => console.log(call.sid))
